@@ -1,0 +1,25 @@
+<html><body><pre><script type="text/javascript">
+Function.prototype.method = function(name,func) {
+	this.prototype[name] = func;
+	return this;
+}
+String.method('deentityify', function ( ) {
+var entity = {
+quot: '"',
+lt: '<',
+gt: '>'
+};
+return function ( ) {
+return this.replace(/&([^&;]+);/g,function (a, b) {
+var r = entity[b];
+document.writeln("a:"+ a + "; b:" + b + "; r:" + r);
+return typeof r === 'string' ? r : a;
+}
+);
+};
+}());
+document.writeln('&lt;&quot;&gt;'.deentityify( ));
+</script>
+</pre>
+</body>
+</html>
