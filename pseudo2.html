@@ -1,0 +1,44 @@
+<html>
+<body>
+<pre>
+<script type = "text/javascript">
+var Mammal = function (name) {
+	this.name = name;
+	};
+Mammal.prototype.get_name = function () {
+	return this.name;
+	};
+Mammal.prototype.says = function (){
+	return this.saying || ' ';
+};
+function inherits(proto) {
+	function F() {}
+	F.prototype = proto;
+	return new F;
+	}
+var Cat = function (name) {
+this.name = name;
+this.saying = 'meow';
+}.
+inherits(Mammal).
+method('purr', function (n) {
+	var i, s = '';
+	for (i = 0; i < n; i += 1) {
+		if (s) {
+			s += '-';
+			}
+		s += 'r';
+		}
+	return s;
+	}).
+	method('get_name', function ( ) {
+	return this.says( ) + ' ' + this.name + ' ' + this.says( );
+	});
+var myCat = new Cat('holley');
+document.writeln(myCat.says());
+document.writeln(myCat.get_name());
+document.writeln(myCat.purr(4));
+</script>
+</pre>
+</body>
+</html>
