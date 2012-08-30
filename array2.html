@@ -1,0 +1,27 @@
+<html>
+<body>
+<pre>
+<script type = "text/javascript">
+var total = function (f, value) {
+	var i;
+	var data = [2, 5, 15, 11, 54];
+	for (i = 0; i < data.length; i++)
+	{
+		value = f(data[i], value);
+	}
+	return value;
+};
+var add = function (a, b){
+	return a + b;
+	};
+var multi = function(a, b){
+	return a * b;
+	};
+
+var sum = total(add, 0);
+var product = total(multi, 1);
+document.writeln("sum: "+ sum + "\n product:" + product);
+</script>
+</pre>
+</body>
+</html>
