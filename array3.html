@@ -1,0 +1,28 @@
+<html>
+<body>
+<pre>
+<script type = "text/javascript">
+Function.prototype.method = function (name, func) {
+this.prototype[name] = func;
+return this;
+};
+Array.method('reduce', function (f, value) {
+var i;
+for (i = 0; i < this.length; i += 1) {
+value = f(this[i], value);
+}
+return value;
+});
+var data1 = [2, 45, 23, 43];
+var add = function (a, b) {
+	return a + b;
+	}
+var mult = function (a,b) {
+	return a * b;
+	}
+document.writeln(data1.reduce(add, 0));
+document.writeln(data1.reduce(mult, 1));
+</script>
+</pre>
+</body>
+</html>
