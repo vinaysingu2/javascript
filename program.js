@@ -9,7 +9,7 @@ departure:{
  place: "hyderabad"
 },
 arrival:{
- time: "2:15",
+ time: "2:18",
  place: "Delhi"
 }
 };
