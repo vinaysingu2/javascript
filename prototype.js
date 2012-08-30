@@ -8,7 +8,7 @@ var F = function () {};
 F.prototype = o;
 return new F();
 };
-}
+}//comment added
 var another_stooge = Object.create(stooge);
 another_stooge['first-name'] = 'Harry';
 another_stooge['middle-name'] = 'Moses';
